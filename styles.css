@@ -237,24 +237,25 @@ h3 { font-size: 28px; }
 .proof-copy { font-size: clamp(18px, 2vw, 24px); line-height: 1.42; }
 .proof-copy p:first-child { margin-top: 0; }
 .proof-copy p:last-child { margin-bottom: 0; }
-.signal-grid {
+.signal-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
   padding-top: 0;
 }
-.signal-grid article {
+.signal-item {
   display: grid;
-  gap: 10px;
-  min-height: 150px;
-  padding: 22px;
+  grid-template-columns: minmax(150px, .45fr) 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 22px 24px;
   border: 2px solid var(--ink);
-  border-radius: 26px;
-  background: rgba(255, 248, 234, .76);
+  border-radius: 24px;
+  background: rgba(255, 248, 234, .78);
   box-shadow: 8px 8px 0 rgba(12, 5, 5, .14);
 }
-.signal-grid strong { font-size: 20px; letter-spacing: -.03em; }
-.signal-grid span { color: var(--muted); line-height: 1.4; }
+.signal-item strong { font-size: 21px; letter-spacing: -.035em; }
+.signal-item span { color: var(--muted); line-height: 1.4; }
 
 .buy-panel { display: grid; grid-template-columns: 1fr 1.1fr; gap: 28px; align-items: center; margin-inline: clamp(18px, 5vw, 76px); padding: clamp(26px, 5vw, 52px); background: linear-gradient(135deg, rgba(255,248,234,.88), rgba(225,6,0,.16)); }
 .buy-panel ol { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
@@ -269,7 +270,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; padding: 28px
   .nav nav { display: none; }
   .hero { grid-template-columns: 1fr; padding-top: 44px; }
   .hero-art { min-height: 500px; }
-  .lore-grid, .buy-panel, .cards, .proof-panel, .signal-grid { grid-template-columns: 1fr; }
+  .lore-grid, .buy-panel, .cards, .proof-panel, .signal-list, .signal-item { grid-template-columns: 1fr; }
   .buy-panel, .proof-panel, .disclaimer, .quote-strip { margin-inline: 18px; }
 }
 
@@ -282,5 +283,6 @@ footer { display: flex; justify-content: space-between; gap: 16px; padding: 28px
   .mascot-card { height: 470px; border-radius: 34px; box-shadow: 10px 10px 0 var(--ink), var(--shadow); }
   .mascot { inset: 70px 18px 88px; width: calc(100% - 36px); height: calc(100% - 158px); }
   .contract-card button { align-items: flex-start; flex-direction: column; }
+  .signal-item { gap: 8px; padding: 20px; }
   footer { flex-direction: column; }
 }
