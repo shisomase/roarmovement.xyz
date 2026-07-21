@@ -240,6 +240,7 @@ h3 { font-size: 28px; }
   gap: clamp(24px, 4vw, 44px);
   align-items: center;
   margin-inline: clamp(18px, 5vw, 76px);
+  margin-bottom: clamp(42px, 6vw, 78px);
   padding: clamp(26px, 5vw, 52px);
   border: 2px solid var(--ink);
   border-radius: 34px;
@@ -251,7 +252,7 @@ h3 { font-size: 28px; }
 .proof-panel h2 { color: #fff8ea; margin-bottom: 20px; }
 .proof-copy { font-size: clamp(18px, 2vw, 23px); line-height: 1.42; }
 .proof-copy p:last-child { margin-bottom: 0; }
-.video-proof { display: grid; gap: 18px; justify-items: center; padding-bottom: 8px; }
+.video-proof { display: grid; gap: 18px; justify-items: center; padding-bottom: 18px; }
 .video-frame {
   width: min(100%, 325px);
   aspect-ratio: 9 / 16;
@@ -285,8 +286,9 @@ h3 { font-size: 28px; }
 .signal-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  padding-top: clamp(28px, 4vw, 52px);
+  gap: 20px;
+  margin-top: clamp(20px, 4vw, 48px);
+  padding-top: 0;
 }
 .signal-item {
   display: grid;
@@ -318,6 +320,8 @@ footer { display: flex; justify-content: space-between; gap: 16px; padding: 28px
   .hero-art { min-height: 500px; }
   .lore-grid, .buy-panel, .cards, .proof-panel, .signal-list, .signal-item { grid-template-columns: 1fr; }
   .buy-panel, .proof-panel, .disclaimer, .quote-strip { margin-inline: 18px; }
+  .proof-panel { margin-bottom: 44px; }
+  .signal-list { margin-top: 18px; }
 }
 
 @media (max-width: 560px) {
