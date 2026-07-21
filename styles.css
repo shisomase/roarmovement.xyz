@@ -218,6 +218,44 @@ h3 { font-size: 28px; }
 .cards article { padding: 28px; }
 .cards span { display: inline-flex; margin-bottom: 34px; color: var(--red); font-weight: 900; }
 .cards p { color: var(--muted); line-height: 1.5; }
+
+.proof-panel {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 34px;
+  align-items: start;
+  margin-inline: clamp(18px, 5vw, 76px);
+  padding: clamp(26px, 5vw, 52px);
+  border: 2px solid var(--ink);
+  border-radius: 34px;
+  background: linear-gradient(135deg, rgba(12,5,5,.96), rgba(123,2,0,.90));
+  color: var(--paper);
+  box-shadow: 12px 12px 0 rgba(12, 5, 5, .20);
+}
+.proof-panel .eyebrow { color: #ffd447; }
+.proof-panel h2 { color: #fff8ea; }
+.proof-copy { font-size: clamp(18px, 2vw, 24px); line-height: 1.42; }
+.proof-copy p:first-child { margin-top: 0; }
+.proof-copy p:last-child { margin-bottom: 0; }
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding-top: 0;
+}
+.signal-grid article {
+  display: grid;
+  gap: 10px;
+  min-height: 150px;
+  padding: 22px;
+  border: 2px solid var(--ink);
+  border-radius: 26px;
+  background: rgba(255, 248, 234, .76);
+  box-shadow: 8px 8px 0 rgba(12, 5, 5, .14);
+}
+.signal-grid strong { font-size: 20px; letter-spacing: -.03em; }
+.signal-grid span { color: var(--muted); line-height: 1.4; }
+
 .buy-panel { display: grid; grid-template-columns: 1fr 1.1fr; gap: 28px; align-items: center; margin-inline: clamp(18px, 5vw, 76px); padding: clamp(26px, 5vw, 52px); background: linear-gradient(135deg, rgba(255,248,234,.88), rgba(225,6,0,.16)); }
 .buy-panel ol { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
 .buy-panel li { display: grid; gap: 4px; padding: 18px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.56); }
@@ -231,8 +269,8 @@ footer { display: flex; justify-content: space-between; gap: 16px; padding: 28px
   .nav nav { display: none; }
   .hero { grid-template-columns: 1fr; padding-top: 44px; }
   .hero-art { min-height: 500px; }
-  .lore-grid, .buy-panel, .cards { grid-template-columns: 1fr; }
-  .buy-panel, .disclaimer, .quote-strip { margin-inline: 18px; }
+  .lore-grid, .buy-panel, .cards, .proof-panel, .signal-grid { grid-template-columns: 1fr; }
+  .buy-panel, .proof-panel, .disclaimer, .quote-strip { margin-inline: 18px; }
 }
 
 @media (max-width: 560px) {
