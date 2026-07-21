@@ -251,7 +251,7 @@ h3 { font-size: 28px; }
 .proof-panel h2 { color: #fff8ea; margin-bottom: 20px; }
 .proof-copy { font-size: clamp(18px, 2vw, 23px); line-height: 1.42; }
 .proof-copy p:last-child { margin-bottom: 0; }
-.video-proof { display: grid; gap: 12px; justify-items: center; }
+.video-proof { display: grid; gap: 18px; justify-items: center; padding-bottom: 8px; }
 .video-frame {
   width: min(100%, 325px);
   aspect-ratio: 9 / 16;
@@ -268,12 +268,25 @@ h3 { font-size: 28px; }
   border: 0;
   background: #050303;
 }
-.video-link { color: #ffd447; font-weight: 900; font-size: 14px; text-transform: uppercase; letter-spacing: .08em; }
+.video-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 212, 71, .12);
+  color: #ffd447;
+  font-weight: 900;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
 .signal-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  padding-top: 0;
+  gap: 18px;
+  padding-top: clamp(28px, 4vw, 52px);
 }
 .signal-item {
   display: grid;
